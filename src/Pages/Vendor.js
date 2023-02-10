@@ -63,7 +63,8 @@ const Vendor = () => {
 
 
   return (
-    <div>
+    <div className='p-8'>
+      <div className='text-left text-3xl font-bold mb-4' >Our All Delicious Food :) </div>
       {
         final.map((object,index)=>(<ItemCard key={index} cusine={object.CusineName} food={object.food} />))
 

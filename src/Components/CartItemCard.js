@@ -3,7 +3,7 @@ import dummyFood from "../Assets/dummyFood.jpg";
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../Store/cartSlice';
 import { MdDeleteForever } from "react-icons/md"
-
+import { BsPlus ,BsDash } from "react-icons/bs";
 
 const CartItemCard = ({item}) => {
 
@@ -29,9 +29,9 @@ const CartItemCard = ({item}) => {
               </div>
               <div className='flex flex-row  items-center gap-6'>
                 <div className='flex flex-row bg-black text-white font-bold text-xl items-center gap-6 p-1 px-2 rounded-md' >
-                  <button onClick={DecreseCount} className= '  ' >-</button>
+                  <button onClick={DecreseCount} className='' ><BsDash/></button>
                   <div className=' ' >{item.quantity}</div>
-                  <button onClick={IncreaseCount} className='' >+</button>
+                  <button onClick={IncreaseCount} className='' ><BsPlus/></button>
                 </div>
                 <div className='p-2' >${item.totalPrice}</div>
               </div>
